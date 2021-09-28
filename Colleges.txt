@@ -1,0 +1,17 @@
+0001 University Departments of Anna University, Chennai - CEG Campus, Sardar Patel Road, Guindy, Chennai 600 025 
+0003 University Departments of Anna University, Chennai - SAP Campus, Sardar Patel Road, Guindy, Chennai 600 025
+0004 University Departments of Anna University, Chennai - MIT Campus, Chrompet, Tambaram Taluk, Kancheepuram District 600044
+1015 University College of Engineering, Arni, Arni to Devikapuram Road, Thatchur, Arni, Thiruvannamalai District 632326
+1026 University College of Engineering, Kancheepuram, Ponnerikarai Campus, NH4, Chennai-Bangalore Highway, Karaipettai Village & Post, Kancheepuram District 631552
+1516 Thanthai Periyar Government Institute of Technology Bagayam, Vellore District
+
+1315 Sri Sivasubramaniya Nadar College of Engineering, Kalavakkam, Old Mahabalipuram Road (OMR), Kancheepuram District 603110
+1419 Sri Sairam Enginering College, West Tambaram, Chennai 600044
+1211 Rajalakshmi Engineering College, Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105
+1216 Saveetha Engineering College, Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105
+1131 Vel Tech, Avadi-Alamathi Road, Chennai 600062
+1113 R M K Engineering College, Kavaraipettai, Gummidipoondi, Thiruvallur District 601206
+1317 St. Joseph’s College of Engineering, Old Mahabalipuram Road (OMR), Chennai 600 119
+1304 Easwari Engineering College, Ramapuram, Chennai 600089
+
+2709 Institute of Road and Transport Technology, Vasavi College Post,Erode District
