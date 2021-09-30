@@ -1,17 +1,53 @@
 0001 University Departments of Anna University, Chennai - CEG Campus, Sardar Patel Road, Guindy, Chennai 600 025 
+BY, CS, CM, EC, EM, EE, IE, IM, MN, ME
+
 0003 University Departments of Anna University, Chennai - SAP Campus, Sardar Patel Road, Guindy, Chennai 600 025
+AR
+
 0004 University Departments of Anna University, Chennai - MIT Campus, Chrompet, Tambaram Taluk, Kancheepuram District 600044
+AE, AU, EC,EM, CS, CM, MF, PR, EI, IM
+
 1015 University College of Engineering, Arni, Arni to Devikapuram Road, Thatchur, Arni, Thiruvannamalai District 632326
+CS, EC, EE, ME
+
 1026 University College of Engineering, Kancheepuram, Ponnerikarai Campus, NH4, Chennai-Bangalore Highway, Karaipettai Village & Post, Kancheepuram District 631552
-1516 Thanthai Periyar Government Institute of Technology Bagayam, Vellore District
+ME, CS, EE, EC
 
 1315 Sri Sivasubramaniya Nadar College of Engineering, Kalavakkam, Old Mahabalipuram Road (OMR), Kancheepuram District 603110
-1419 Sri Sairam Enginering College, West Tambaram, Chennai 600044
-1211 Rajalakshmi Engineering College, Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105
-1216 Saveetha Engineering College, Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105
-1131 Vel Tech, Avadi-Alamathi Road, Chennai 600062
-1113 R M K Engineering College, Kavaraipettai, Gummidipoondi, Thiruvallur District 601206
-1317 St. Joseph’s College of Engineering, Old Mahabalipuram Road (OMR), Chennai 600 119
-1304 Easwari Engineering College, Ramapuram, Chennai 600089
+EE, EC, CS,IT, BM, ME
 
-2709 Institute of Road and Transport Technology, Vasavi College Post,Erode District
+1419 Sri Sairam Enginering College, West Tambaram, Chennai 600044
+CS, EC, EE, EI, ME, IT, CB, AD, MU
+
+1211 Rajalakshmi Engineering College, Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105
+AE, AU, CS, CB, EC, EE, IT, ME, Mc, RM, CD, AL
+
+1118 Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College (Autonomous), Avadi-Alamathi Road, Chennai 600 062
+CS, EC, EE, IT, ME, AD, CB
+
+1122 Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering College, Avadi-Alamathi Road, Chennai 600 062
+EC, IT, AD, CS, ME
+
+1216 Saveetha Engineering College, Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105
+BM, CS, EC, EE, EI, MD, ME, AD
+
+1120 Velammal Engineering College (Autonomous), Ambattur-Redhills Road, Chennai 600066
+AU, CS, EC, EI, ME, IT, AD, EE
+
+1304 Easwari Engineering College, Ramapuram, Chennai 600089
+AD, AU, CS, EC, EE, EI, IT, ME, RM
+
+1311 K C G College of Technology, Karappakkam, Chennai 600096
+AE, AD, AO, AU, CS, EC, EE, IT, MC, ME
+
+1210 Panimalar Engineering College, Nazarethpet, Poonamallee, Chennai 602103
+CS, IT, EC, EE, ME, AD, CB, CO
+
+1317 St. Joseph’s College of Engineering, Old Mahabalipuram Road (OMR), Chennai 600 119
+CS, EC, EE, EI, AD, IT, ME, AL
+
+1219 Sri Venkateswara College of Engineering (Autonomous), Post Bag No.1, Chennai-Bengaluru High Road, Pennalur, Irungattukottai S.O.,Sriperumbudur Taluk, Kancheepuram District 602117
+AD, CS, EE, IT, AU, ME
+
+Choice Courses:
+AD, AE, AS, DE, AM, AO, AR, AU, BD, CB, CM, CO, CS, CT, CW, CY, EC, EE, EI, EM, ES, ET, EX, EY, IE, IG, IM, IN, IT, MC/MZ, MD, ME, MF, MS, MN, MO, MS, MU, NS, PR, PE, RA, RM, SB, TS, BM, BT
