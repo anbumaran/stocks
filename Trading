@@ -2,10 +2,30 @@
 If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. 
 - James 1:5
 
-* Trend guide Trend | 
+* Entry ORB:: 9:15~9:20 | 9:25 Spot 
+* Entry [Buy SL order] > 10:15:: Option 1 min price - break TL conn. Swing Highs | HTHB if Swing Highs are far away
+* Exit [Sell SL order]::Option 5 min price - pre Swing Low | below solid L cand | 70% Rev on Agg move - far away pre Swing Low in 1 min chart  
+* Expiry Entry:: No Trade after 2:00 pm |2:00~3:00 Full-loss Bet - Max 10% Acc Va
+* Overnight Bet [N-1 N-2 Expiry esp after Consol day] Entry:: only after 3:00 pm | 70% on Trend side 200 SMA 5 min & 30% on counter trend - if funds > 30% Acc Va
+* Note: One Exit Stragery for all types of Entry | On >2x / 3x Profit close min 30%~50% of position | Avg move::Nifty/Mid Cap - 0.5% | Bank/Fin Nifty - 1%
+
+
+* Option Buyer:: Green candle close above pre M / L candle high | 61% for XL candle 
+* SL below L / 61% of XL can catch large move 
+* After 2:30pm Expiry bet 5%~10% of Acc without SL (Full loss) 
+* Stop loss below L / XL candle is suggested for positional and when larger move is expected. If position IS closed keep buy stop loss open to catch the expected move 
+* Use 1 min option chart to enter when LTLB / Swing highs / resistance Trend line breaks upside & exit when HTHB / swing lows / support tend lines breaks. In case of 5 min candle use previous candle H/L & Trend lines - L & XL candles. Do not use previous candle in 1 min which is not reliable 
+* Overnight position should be taken only after 3pm. But all other position is to follow intraday SL - TSL 
+
+* Do NOT trade after 2:00 pm on Exp option
+* On >2x / 3x profit::close min 30% ~50% of position 
 * #1 NTA | Enter::Spot HTHB | LTLB - 5 min Trend Side or Reversal + Price Bynd VWAP SD1 | 20 EMA 5 min Slanting  | 15min ORB
-* Option Buy based on Option Price - Entry cond.:: HTHB | Break Trend Line - 1 min |  Engulf up 1x L | >61% XL 5min Candle | above 10EMA (>10am) / 20 EMA(>11am) | 10 min ORB | SL cond.:: Lower TL | Swing L Engulf down 1x L | >61% XL 5min. Strictly follow Entry & SL cond., if SL hit wait for Entry cond. do NOT overtrade 
-* Intraday::9:15~10:15am Entry::10 min ORB & aggressive TSL | 9am~2pm Entry:: wrt #1 Never take Position against Trend or Both side bet | After 2 pm:: Exp bet / After 3pm:: O. Night N-1, N-2 Expiry J bet Entry:: 100~66% Trend side (200 SMA 5min) vs 0~33% C.Trend | BO rally after consol. Nifty/Mid - 0.5% Bank/Fin Nifty 1%
+* Option Buy based on Option Price - Entry cond.:: HTHB | Break Trend Line - 1 min |  Engulf up 1x L | >61% XL 5min Candle | above 10EMA (>10am) / 20 EMA(>11am) | 10 min ORB | SL cond.:: Lower TL | Swing L Engulf down 1x L | >61% XL 5min. Strictly follow Entry & SL cond., if Entry cond triggered buy till SL cond is not met i.e buy on pull backs. if SL hit wait for Entry cond. do NOT overtrade 
+* 9:15~10:15am Entry::10 min ORB | O.Night position, aggressive TSL
+* 9am~2pm Entry:: wrt #1 Never take Position against Trend or Both side bet
+* After 3pm:: O. Night N-1, N-2 Expiry J bet (Expecting BO rally esp. after consol. / correction) Entry:: 75~50% Trend side (200 SMA 5min) vs 25~50% C.Trend. Consider OI & PCR for overnight  
+* After 1:30 pm on Expiry(better avoid)::Bet both side with total loss expectancy & TSL on large profit
+* Avg Mov::Nifty/Mid:0.5% Bank/Fin Nifty 1%
 * Entry #1 & Re-Entry #2 based on Spot 5 min candle close confirm. to avoid SL hunt by price spikes. Buy cheap on Pullback but not against HTHB LTLB | 20EMA 5min Trend lines are early indicator than swings 
 * #2 Re-Entry::Trend side Engulf Multi 3x M | 1xL | 61% XL Corr. Candle + 20EMA - 5min | SPB 1x Swing E::Prices cont. Trend with 61% retrace Swing H/L | CPB 3x Swing E:: Swing Trend L. Break | H/L-TB Rev. | Re-Entry S.Trend::10, 20, 50, 200 MAs
 * #3 SL must for intraday, but Not big (SL hunt::Slight & Fast Break H/L-TB | Pre Swing). If SL hit wait for Re-Entry wrt # 2 
@@ -26,5 +46,4 @@ If any of you lacks wisdom, you should ask God, who gives generously to all with
 
 * Expiry Trade::Max loss Day,  Avoid Over night position as Unfav Open loss induce Neg. mind set to Scaled & Over trade to cover Loss Over Trade  and Trade without Analysis.  Premium will Fall Fast during Open, Consolidation, Better Trade after 1:00pm with 50% SL and Max loss Limit. 
 * Price movement before 2hrs before expiry is mystery. Beware of Reduced Premium induce Scaled Position, High leverage High loss & Overtrade too.
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
