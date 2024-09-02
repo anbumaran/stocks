@@ -2,14 +2,13 @@
 If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. 
 - James 1:5
 
-
-
 * Entry ORB Sport[NTA]:: 9:25 | 9:30 | 9:45  
-* #B Entry [Buy SL order] > 10:30:: Option 1 min price - break TL conn. swing highs | Prev swing break, if steep LTLB diff | >78% retrace - far away pre swing high + GL::Spot 5 min HTHB | LTLB / 20 | 50 EMA
-* #S Exit [Sell SL order]::Option 1 min price - SwLo before HT,  Move SwLo only after HT corr. move become bullish wrt #B | <78% retrace for away pre SwHi
-* Expiry Entry:: No Trade after 2:00 pm |2:00~3:00 Full-loss Bet - Max 10% Acc Va
-* Overnight Bet [N-1, N-2 Expiry esp after Consol day] Entry:: only after 3:00 pm | 70% on Trend side 200 SMA 5 min & 30% on counter trend - if funds > 30% Acc Va
-* Pull backs 38~61% are good Re-Entry | Market move independent of News, Global Market  | Never Trade based on OI, R/S | Avg move::Nifty/Mid Cap - 0.5% | Bank/Fin Nifty - 1% | S.Trend Day / Expire closes usually at peak of Trend | On >2x / 3x Profit close min 30%~50% of position | One Exit Stragery for all types of Entry
+* #B Entry [Buy SL order]::Optn 1 min price 1) > 10x cand, Break TL conn. swing highs 2a) LH:: N-1 SwHi break 2b) HL:: N-1 > N-2 SwLo + Engulf L/XL cand high 3) ReTrace > 60~78% far away SwHi + Spot 5 min HTHB | LTLB / 20 | 50  EMA
+* #S Exit [Sell SL order]::Option 1 min price -  HL  / SwLo before HT,  Move SwLo after HT corr. move become bullish wrt #B | 61 ~ 80% retrace for away Pre SwHi | No Big SL, Keep TSL @ 70% lock for profit > 50%
+* #C Consol. Day:: No Trade - Spot price oscillate  within 45 min OR / Previous day range, flat VWAP, 5min 20 EMA &  SD1, very low prob. of BO/Expiry BO. Try others
+* Expiry Day::@2pm 1) No Trade If Consol. #C Prob. of Consol. close  is very higher than JP - Opt price fall fast to zero, scaled trade, heavy loss, UnManag. Buy & SL. 2) JP Trade @2pm S. Trend day only
+* Daily Overnight Bet [N-1/N-2 Expiry esp after Consol day] Entry::only after 3:00 | 70% on Trend side 21 EMA 1 hr & 30% on counter trend - if funds > 30% Acc Va
+* Watch out both Put & call, N & N-1 contracts | Pull backs 38~61% are good Re-Entry | Market move independent of News, Global Market  | Do trade over priced options | Never Trade based on OI, R/S | Avg move::Nifty/Mid Cap - 0.5% | Bank/Fin Nifty - 1% | S.Trend Day / Expire closes usually at peak of Trend | On >2x / 3x Profit close min 30%~50% of position | One Exit Stragery for all types of Entry
 
 
 * Do NOT trade after 2:00 pm on Exp option
