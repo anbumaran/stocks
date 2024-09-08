@@ -6,9 +6,10 @@ If any of you lacks wisdom, you should ask God, who gives generously to all with
 * #B Entry [Buy SL order]::Optn 5 min price [Never use 1 min] #f >10x cand, Break TL conn. swing highs #r Bull break N-1 SwHi LT|LH #re ReEntry till 60% corr. from far away HT|HH + > pre solid candle high #rt ReTrace >60% from far away HB|HL, if LB|LL then >78% + 5 min Spot HTHB | LTLB 
 * #S Exit [Sell SL order]::Option price -  HL/SwLo before HT,  Move SwLo after HT corr. move become bullish #B | pre L/XL cand low | > 10x cand, TL break | >61% for faraway SwLo | No Big SL, S.Trend use 5 min, 1 min if faraway | TSL 70% lock profit 
 * #C Consol. Day:: No Trade - Spot price oscillate  within 45 min OR / Previous day range, flat VWAP, 5min 20 EMA &  SD1, very low prob. of BO/Expiry BO. Try others
-* Expiry Day >2:00pm No #B Trade, Full loss (No SL) bet both side 1st OTM | Limit O.Night position due to un predict. Open, ~30% Acc Value, Trend side 20EMA 1 Hr
-* Daily Overnight Bet [N-1/N-2 Expiry esp after Consol day] Entry::only after 3:00 | 70% on Trend side 21 EMA 1 hr & 30% on counter trend - if funds > 30% Acc Va
-* Watch out both Put & call, N & N-1 contracts | Pull backs 38~61% are good Re-Entry | Market move independent of News, Global Market  | Do trade over priced options | Never Trade based on OI, R/S | Avg move::Nifty/Mid Cap - 0.5% | Bank/Fin Nifty - 1% | S.Trend Day / Expire closes usually at peak of Trend | On >2x / 3x Profit close min 30%~50% of position | One Exit Stragery for all types of Entry
+* Expiry Day >2:00pm No #B Trade, Full loss (No SL) bet both side 1st OTM | Limit O.Night position due to unpredict. Open, ~30% Acc Value, Trend side 20EMA 1 Hr
+* Near expiry 2:30~3:30pm::Confusion Put / Call, Scaled / Over trade, unreliable SL  
+
+* Watch out both Put & call, N & N-1 contracts | Pull backs 38~61% are good Re-Entry | Market move independent of News, Global Market  | Do trade over priced options | Never Trade based on OI, R/S | Avg move::Nifty/Mid Cap - 0.5% | Bank/Fin Nifty - 1% | S.Trend Day / Expire closes usually at peak of Trend | On >2x / 3x Profit close min 30%~50% of position | One Exit Stragery for all types of Entry | Daily Overnight Bet [N-1/N-2 Expiry esp after Consol day] Entry::only after 3:00 | 70% on Trend side 21 EMA 1 hr & 30% on counter trend - if funds > 30% Acc Val
 
 
 
