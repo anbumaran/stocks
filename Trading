@@ -2,12 +2,22 @@
 If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. 
 - James 1:5
 
-* ORB + PreDayRB Sport Entry <10:15:: 9:25 | 9:30 | 9:45, #faster TL break 1 min, Spot Range BO is key than Option price pattern as price is volatile in Open, if No ORB then price may Consol. in Range. ORB/PDRB - H/L is stronger than Fib 61% Retrace, Do Not comp. CMP with pre Day price pattern 
-* #B Entry [Buy SL order]>10:45:: Optn 5 min price [Never use 1 min] #f >10x cand, Break TL conn. swing highs #r Bull break N-1 SwHi LT|LH #re ReEntry till 60% corr. from far away HT|HH + > pre solid candle high #rt ReTrace >60% from far away HB|HL, if LB|LL then >78% + 5 min Spot HTHB | LTLB 
-* #S Exit [Sell SL order]::Option price -  HL/SwLo before HT,  Move SwLo after HT corr. move become bullish #B | pre L/XL cand low | > 10x cand, TL break | >61% for faraway SwLo | No Big SL, S.Trend use 5 min, 1 min if faraway | TSL 70% lock profit Book 50% position for Profit >40%. 
+ORB: 
+* ORB + PreDayRB Sport Entry <10:00:: 9:25 | 9:30 | 9:45, Check 10 min ORB is Subseq. confirm by stronger 15min ORB & Pre-Day Range #faster TL break 1 min, Spot Range BO is key than Option price pattern as price is volatile in Open, if No ORB then price may Consol. in Range. ORB/PDRB - H/L is stronger than Fib 61% Retrace, Do Not comp. CMP with pre Day price pattern. ORB >10:00 may not work
+
+Spot Trend Bullish | Bearish in 5 min Chart::
+* Ordinary Always Consider N-1....N-4 Swings >> Tops x 2 + Bottoms x 2 | Large Swings N-1...N-2 + Fib
+* Bearish to Bullish: 1) Ordinary Swing LT-2 break 2) Large Swing retrace >61% + HB (SwLow N-1>N-2) not break + LT-1 break  3) Large Swing retrace >61% + HB & Price not fall back >50~60% 
+* Bullish Continue: 1) Ordinary Swings HB-2 Not broken 2) Large Swing retrace not > 50~60% + HB-1 not broken 
+* Bearish to Bullish: 1) Ordinary Swing LB-2 break 2) Large Swing retrace >61% + HB (SwLow N-1>N-2) + LT-1 break  3) Large Swing retrace >61% + Price not fall back >50~60% + HB not break
+* Bearish Continue: 1) Ordinary Swings HB-2 Not broken 2) Large Swing retrace not > 50~60% + HB-1 not broken
+
+* #B Entry [Buy SL order]>10:30:: Optn 5 min price [Never use 1 min] #f >10x cand, Break TL conn. swing highs #r Bull break N-1 SwHi LT|LH #re ReEntry till 60% corr. from far away HT|HH + > pre solid candle high #rt ReTrace >60% from far away HB|HL, if LB|LL then >78% + 5 min Spot HTHB | LTLB
+* All Entry based on 5 min option chart pre candle cross (not applicable on multiple red candles) + also see 1 min option Swing High is crossed + 5 min Spot should match bull or bear / SL | Exit - 1 min chart. Don’t re buy on violent move in 1 min / only when price consolidate in 1 min chat 
+* Trend may not always need to close peak, follow price pattern then assumptions 
+* #S Exit [Sell SL order]::Option price -  HL/SwLo before HT,  Move SwLo after HT corr. move become bullish #B | Never close position without this >>  N-1  61% XL/ N-1 L Cd. low / N-2 M Cd. low / Deeper Swing low during tight Consol. don’t keep SL under Shallow SwLo with S Cd. in 5 min / 1 min |  > 10x cand, TL break | >61% for faraway SwLo | No Big SL, S.Trend use 5 min, 1 min if faraway | TSL 70% lock profit Book 50% position for Profit >40%, rest 50% SL @ min buy price, Open mostly looses money only short time it gains. Must watch 5 min chart esp SL below Solid Bar L, XL
 * #C Consol. Day:: No Trade - Spot price oscillate  within 45 min OR / Previous day range, flat VWAP, 5min 20 EMA &  SD1, very low prob. of BO/Expiry BO. Try others
-* Near expiry 2:00~3:30pm:: Confusion on selecting Put | Call, Scaled / Over trade, unreliable SL, Unreliable HTHB / LTLB pattern, Both side bet low success prob.
-* Expiry Day >2:00pm No #B Trade, Full loss (No SL) bet both side 1st OTM | Limit O.Night position due to unpredict. Open, ~30% Acc Value, Trend side 20EMA 1 Hr
+* Expiry Day>2:00pm:: Confusion on selecting Put | Call, Scaled / Over trade, unreliable SL, Unreliable HTHB / LTLB pattern, But Both side bet @ 1:30pm at 1st or 2nd OTM can be tried. 
 
 * Watch out both Put & call, N & N-1 contracts | Pull backs 38~61% are good Re-Entry | Market move independent of News, Global Market  | Do trade over priced options | Never Trade based on OI, R/S | Avg move::Nifty/Mid Cap - 0.5% | Bank/Fin Nifty - 1% | S.Trend Day / Expire closes usually at peak of Trend | On >2x / 3x Profit close min 30%~50% of position | One Exit Stragery for all types of Entry | Daily Overnight Bet [N-1/N-2 Expiry esp after Consol day] Entry::only after 3:00 | 70% on Trend side 21 EMA 1 hr & 30% on counter trend - if funds > 30% Acc Val
 
