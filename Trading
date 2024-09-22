@@ -7,10 +7,10 @@ ORB:
 
 Spot Trend Bullish | Bearish in 5 min Chart::
 * Ordinary Always Consider N-1....N-4 Swings >> Tops x 2 + Bottoms x 2 | Large Swings N-1...N-2 + Fib
-* Bearish to Bullish: 1) Ordinary Swing LT-2 break 2) Large Swing retrace >61% + HB (SwLow N-1>N-2) not break + LT-1 break  3) Large Swing retrace >61% + HB & Price not fall back >50~60% 
-* Bullish Continue: 1) Ordinary Swings HB-2 Not broken 2) Large Swing retrace not > 50~60% + HB-1 not broken 
-* Bearish to Bullish: 1) Ordinary Swing LB-2 break 2) Large Swing retrace >61% + HB (SwLow N-1>N-2) + LT-1 break  3) Large Swing retrace >61% + Price not fall back >50~60% + HB not break
-* Bearish Continue: 1) Ordinary Swings HB-2 Not broken 2) Large Swing retrace not > 50~60% + HB-1 not broken
+* Bearish to Bullish: a) Ordinary LTLB break LT-2 up side b) Large Swing retrace >61% + Price immeditatly not fall back >50~61% + form HTHB and not break HB-1 downside
+* Bullish Continue: a) Ordinary HTHB not break HB-2 down side b) Violent Large Swing retrace not > 50~61% + not form LTLB | if Complex PB | LTLB formed it should reverse break LT-1 up side and raise back >50~60% c) Correction Consolidation Ordinary LTLB break LT-2 up side
+* Bullish to Bearish: a) Ordinary HTHB break HB-2 down side b) Large Swing retrace >61% + Price immeditatly not raise >50~61% + form LTLB pattern and not break LT-1 upside
+* Bearish Continue: a) Ordinary LTLB not break LT-2 up side b) Violent Large Swing retrace not > 50~61% + not form HTHB | if Complex PB | HTHB formed it should reverse break HB-1 down side and fall back >50~60% c) Correction Consolidation Ordinary HTHB break HB-2 down side 
 
 * #B Entry [Buy SL order]>10:30:: Optn 5 min price [Never use 1 min] #f >10x cand, Break TL conn. swing highs #r Bull break N-1 SwHi LT|LH #re ReEntry till 60% corr. from far away HT|HH + > pre solid candle high #rt ReTrace >60% from far away HB|HL, if LB|LL then >78% + 5 min Spot HTHB | LTLB
 * All Entry based on 5 min option chart pre candle cross (not applicable on multiple red candles) + also see 1 min option Swing High is crossed + 5 min Spot should match bull or bear / SL | Exit - 1 min chart. Don’t re buy on violent move in 1 min / only when price consolidate in 1 min chat 
