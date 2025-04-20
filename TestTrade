@@ -1,22 +1,34 @@
 //@version=6
-indicator("Trendlines with Breaks [AA]", "TL - BO", overlay = true)
+indicator("Trendlines with Breaks and Big Candle [AA]", "TL BO BCd", overlay = true)
 
 //------------------------------------------------------------------------------
 //Settings
 //-----------------------------------------------------------------------------{
-length = input.int(2, 'Swing Detection Lookback')
-mult = input.float(0., 'Slope', minval = 0, step = .1)
-calcMethod = input.string('Atr', 'Slope Calculation Method', options = ['Atr','Stdev','Linreg'])
-backpaint = input(true, tooltip = 'Backpainting offset displayed elements in the past. Disable backpainting to see real time information returned by the indicator.')
+//===>Trendlines with Breaks - Inputs<=== 
+length = input.int(2, 'Swing Detection Lookback', group = 'TrendLine Breakouts')
+mult = input.float(0., 'Slope', minval = 0, step = .1, group = 'TrendLine Breakouts')
+calcMethod = input.string('Atr', 'Slope Calculation Method', options = ['Atr','Stdev','Linreg'], group = 'TrendLine Breakouts')
+backpaint = input(true, tooltip = 'Backpainting offset displayed elements in the past. Disable backpainting to see real time information returned by the indicator.', 
+              group = 'TrendLine Breakouts')
+
+//===>Big Candle - Calculation - Inputs<=== 
+percentageThreshold = input.float(0.1, title="Percentage Threshold (%)", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
+candleSizeMethod = input.string("Prev Close to Current Close", title="Candle Size Calculation Method", 
+     options=["Open-Close", "High-Low", "Open-High", "Open-Low", "Prev Close to Current Close", "Prev Close to Current Open"], group = 'Big Candle')
+bgcolorBigCd = input.bool(false, 'Show Big Candle background')
 
 //Style
-upCss = input.color(color.teal, 'Up Trendline Color', group = 'Style')
+upCss = input.color(color.green, 'Up Trendline Color', group = 'Style')
 dnCss = input.color(color.red, 'Down Trendline Color', group = 'Style')
 showExt = input(true, 'Show Extended Lines')
+
+//colorUp = input.color(color.green, title="Color for Big Bullish Candle")
+//colorDown = input.color(color.red, title="Color for Big Bearish Candle")
 
 //-----------------------------------------------------------------------------}
 //Calculations
 //-----------------------------------------------------------------------------{
+//===>Trendlines with Breaks - Calculations<=== 
 var upper = 0.
 var lower = 0.
 var slope_ph = 0.
@@ -48,6 +60,31 @@ var dnos = 0
 upos := bool(ph) ? 0 : close > upper - slope_ph * length ? 1 : upos
 dnos := bool(pl) ? 0 : close < lower + slope_pl * length ? 1 : dnos
 
+
+//===>Big Candle - Calculations<=== 
+candleSize = switch candleSizeMethod
+    "Open-Close" => math.abs(close - open)
+    "High-Low" => high - low
+    "Open-High" => high - open
+    "Open-Low" => open - low
+    "Prev Close to Current Close" => math.abs(close - nz(close[1]))
+    "Prev Close to Current Open" => math.abs(open - nz(close[1]))
+
+// Calculate the percentage difference
+basePrice = switch candleSizeMethod
+    "Open-Close" => open
+    "High-Low" => open
+    "Open-High" => open
+    "Open-Low" => open
+    "Prev Close to Current Close" => nz(close[1])
+    "Prev Close to Current Open" => nz(close[1])
+
+candlePercentage = (candleSize / basePrice) * 100
+
+// Check if the candle is big
+isBigCandle = candlePercentage >= percentageThreshold
+
+
 //-----------------------------------------------------------------------------}
 //Extended Lines
 //-----------------------------------------------------------------------------{
@@ -65,6 +102,7 @@ if bool(pl) and showExt
 //-----------------------------------------------------------------------------}
 //Plots
 //-----------------------------------------------------------------------------{
+//===>Trendlines with Breaks - Plots<=== 
 plot(backpaint ? upper : upper - slope_ph * length, 'Upper', color = bool(ph) ? na : upCss, offset = -offset)
 plot(backpaint ? lower : lower + slope_pl * length, 'Lower', color = bool(pl) ? na : dnCss, offset = -offset)
 
@@ -85,10 +123,18 @@ plotshape(dnos > dnos[1] ? high : na, "Lower Break"
   , textcolor = color.white
   , size = size.tiny)
 
+//===>Big Candle - Plots<=== 
+plotshape(series=isBigCandle and close > open, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc", textcolor=color.white)
+plotshape(series=isBigCandle and close < open, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc", textcolor=color.white)
+
+// Optionally, highlight the background of big candles
+
+bgcolor(isBigCandle and bgcolorBigCd ? (close > open ? color.new(upCss, 85) : color.new(dnCss, 85)) : na) 
+
 //-----------------------------------------------------------------------------}
 //Alerts
 //-----------------------------------------------------------------------------{
-alertcondition(upos > upos[1], 'Upward Breakout', 'Price broke the down-trendline upward')
-alertcondition(dnos > dnos[1], 'Downward Breakout', 'Price broke the up-trendline downward')
+alertcondition(upos > upos[1] or (isBigCandle and close > open), 'Upward Breakout', 'Price broke the down-trendline upward or Green Big candle')
+alertcondition(dnos > dnos[1] or (isBigCandle and close < open), 'Downward Breakout', 'Price broke the up-trendline downward or Red Big candle')
 
 //-----------------------------------------------------------------------------}
