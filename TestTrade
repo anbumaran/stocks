@@ -10,56 +10,71 @@ mult = input.float(0., 'Slope', minval = 0, step = .1, group = 'TrendLine Breako
 calcMethod = input.string('Atr', 'Slope Calculation Method', options = ['Atr','Stdev','Linreg'], group = 'TrendLine Breakouts')
 backpaint = input(true, tooltip = 'Backpainting offset displayed elements in the past. Disable backpainting to see real time information returned by the indicator.', 
               group = 'TrendLine Breakouts')
+showTL = input(true, 'Show Trendlines', group = 'TrendLine Breakouts')
+showTLBO = input(true, 'Show Trendlines Breakouts', group = 'TrendLine Breakouts')
+showExt = input(true, 'Show Extended Lines', group = 'TrendLine Breakouts')
 
 //===>Big Candle - Calculation - Inputs<=== 
-percentageThreshold = input.float(0.1, title="Percentage Threshold (%)", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
+percentageThreshold = input.float(0.15, title="Percentage Threshold (%)", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
 candleSizeMethod = input.string("Prev Close to Current Close", title="Candle Size Calculation Method", 
      options=["Open-Close", "High-Low", "Open-High", "Open-Low", "Prev Close to Current Close", "Prev Close to Current Open"], group = 'Big Candle')
-bgcolorBigCd = input.bool(false, 'Show Big Candle background')
+bgcolorBigCd = input.bool(false, 'Show Big Candle background', group = 'Big Candle')
+showBigCd = input(true, 'Show Big Candles', group = 'Big Candle')
 
 //Style
 upCss = input.color(color.green, 'Up Trendline Color', group = 'Style')
 dnCss = input.color(color.red, 'Down Trendline Color', group = 'Style')
-showExt = input(true, 'Show Extended Lines')
 
-//colorUp = input.color(color.green, title="Color for Big Bullish Candle")
-//colorDown = input.color(color.red, title="Color for Big Bearish Candle")
 
 //-----------------------------------------------------------------------------}
 //Calculations
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Calculations<=== 
-var upper = 0.
-var lower = 0.
-var slope_ph = 0.
-var slope_pl = 0.
+//var upper = 0.
+//var lower = 0.
+//var slope_ph = 0.
+//var slope_pl = 0.
 
 var offset = backpaint ? length : 0
 
 n = bar_index
 src = close
 
-ph = ta.pivothigh(length, length)
-pl = ta.pivotlow(length, length)
+getTrendLineBreakout(_timeFrame) =>
+    ph = request.security(syminfo.tickerid, _timeFrame, ta.pivothigh(length, length))
+    pl = request.security(syminfo.tickerid, _timeFrame, ta.pivotlow(length, length))
 
-//Slope Calculation Method
-slope = switch calcMethod
-    'Atr'    => ta.atr(length) / length * mult
-    'Stdev'  => ta.stdev(src,length) / length * mult
-    'Linreg' => math.abs(ta.sma(src * n, length) - ta.sma(src, length) * ta.sma(n, length)) / ta.variance(n, length) / 2 * mult
+    //Slope Calculation Method
+    slope = switch calcMethod
+        'Atr'    => request.security(syminfo.tickerid, _timeFrame, ta.atr(length)) / length * mult
+        'Stdev'  => request.security(syminfo.tickerid, _timeFrame, ta.stdev(src,length)) / length * mult
+        'Linreg' => math.abs(
+             request.security(syminfo.tickerid, _timeFrame, ta.sma(src * n, length)) -
+             request.security(syminfo.tickerid, _timeFrame, ta.sma(src, length)) *
+             request.security(syminfo.tickerid, _timeFrame, ta.sma(n, length))) / 
+             request.security(syminfo.tickerid, _timeFrame, ta.variance(n, length)) / 2 * mult
 
-//Get slopes and calculate trendlines
-slope_ph := not na(ph) ? slope : slope_ph
-slope_pl := not na(pl) ? slope : slope_pl
+    //Get slopes and calculate trendlines
+    var float slope_ph = na
+    var float slope_pl = na
 
-upper := not na(ph) ? ph : upper - slope_ph
-lower := not na(pl) ? pl : lower + slope_pl
+    slope_ph := not na(ph) ? slope : slope_ph
+    slope_pl := not na(pl) ? slope : slope_pl
 
-var upos = 0
-var dnos = 0
-upos := not na(ph) ? 0 : close > upper - slope_ph * length ? 1 : upos
-dnos := not na(pl) ? 0 : close < lower + slope_pl * length ? 1 : dnos
+    var float upper = na
+    var float lower = na
 
+    upper := not na(ph) ? ph : upper - slope_ph
+    lower := not na(pl) ? pl : lower + slope_pl
+
+    var upos = 0
+    var dnos = 0
+    upos := not na(ph) ? 0 : close > upper - slope_ph * length ? 1 : upos
+    dnos := not na(pl) ? 0 : close < lower + slope_pl * length ? 1 : dnos
+    [upos, dnos, ph, pl, upper, lower, slope_ph, slope_pl, slope]
+
+[upos15m, dnos15m, ph15m, pl15m, upper15m, lower15m, slope_ph15m, slope_pl15m, slope15m] = getTrendLineBreakout("15")
+[upos3m, dnos3m, ph3m, pl3m, upper3m, lower3m, slope_ph3m, slope_pl3m, slope3m] = getTrendLineBreakout("3")
 
 //===>Big Candle - Calculations<=== 
 candleSize = switch candleSizeMethod
@@ -88,26 +103,27 @@ isBigCandle = candlePercentage >= percentageThreshold
 //-----------------------------------------------------------------------------}
 //Extended Lines
 //-----------------------------------------------------------------------------{
+
 var uptl  = line.new(na,na,na,na, color = upCss, style = line.style_dashed, extend = extend.right)
 var dntl  = line.new(na,na,na,na, color = dnCss, style = line.style_dashed, extend = extend.right)
 
-if not na(ph) and showExt
-    uptl.set_xy1(n-offset, backpaint ? ph : upper - slope_ph * length)
-    uptl.set_xy2(n-offset+1, backpaint ? ph - slope : upper - slope_ph * (length+1))
+if not na(ph15m) and showExt
+    uptl.set_xy1(n-offset, backpaint ? ph15m : upper15m - slope_ph15m * length)
+    uptl.set_xy2(n-offset+1, backpaint ? ph15m - slope15m : upper15m - slope_ph15m * (length+1))
 
-if not na(pl) and showExt
-    dntl.set_xy1(n-offset, backpaint ? pl : lower + slope_pl * length)
-    dntl.set_xy2(n-offset+1, backpaint ? pl + slope : lower + slope_pl * (length+1))
+if not na(pl15m) and showExt
+    dntl.set_xy1(n-offset, backpaint ? pl15m : lower15m + slope_pl15m * length)
+    dntl.set_xy2(n-offset+1, backpaint ? pl15m + slope15m : lower15m + slope_pl15m * (length+1))
 
 //-----------------------------------------------------------------------------}
 //Plots
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Plots<=== 
-plot(backpaint ? upper : upper - slope_ph * length, 'Upper', color = not na(ph) ? na : upCss, offset = -offset)
-plot(backpaint ? lower : lower + slope_pl * length, 'Lower', color = not na(pl) ? na : dnCss, offset = -offset)
+plot(backpaint ? upper15m : showTL ? upper15m - slope_ph15m * length : na, 'Upper', color = not na(ph15m) ? na : upCss, offset = -offset)
+plot(backpaint ? lower15m : showTL ? lower15m + slope_pl15m * length : na, 'Lower', color = not na(pl15m) ? na : dnCss, offset = -offset)
 
 //Breakouts
-plotshape(upos > upos[1] ? low : na, "Upper Break"
+plotshape(showTLBO and upos15m > upos15m[1] ? low : na, "Upper Break"
   , shape.labelup
   , location.absolute
   , upCss
@@ -115,7 +131,7 @@ plotshape(upos > upos[1] ? low : na, "Upper Break"
   , textcolor = color.white
   , size = size.tiny)
 
-plotshape(dnos > dnos[1] ? high : na, "Lower Break"
+plotshape(showTLBO and dnos15m > dnos15m[1] ? high : na, "Lower Break"
   , shape.labeldown
   , location.absolute
   , dnCss
@@ -124,8 +140,8 @@ plotshape(dnos > dnos[1] ? high : na, "Lower Break"
   , size = size.tiny)
 
 //===>Big Candle - Plots<=== 
-plotshape(series=isBigCandle and close > open, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc", textcolor=color.white)
-plotshape(series=isBigCandle and close < open, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc", textcolor=color.white)
+plotshape(series=isBigCandle and close > open and showBigCd, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc", textcolor=color.white)
+plotshape(series=isBigCandle and close < open and showBigCd, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc", textcolor=color.white)
 
 // Optionally, highlight the background of big candles
 
@@ -134,7 +150,7 @@ bgcolor(isBigCandle and bgcolorBigCd ? (close > open ? color.new(upCss, 85) : co
 //-----------------------------------------------------------------------------}
 //Alerts
 //-----------------------------------------------------------------------------{
-alertcondition(upos > upos[1] or (isBigCandle and close > open), 'Upward Breakout', 'Price broke the down-trendline upward or Green Big candle')
-alertcondition(dnos > dnos[1] or (isBigCandle and close < open), 'Downward Breakout', 'Price broke the up-trendline downward or Red Big candle')
+alertcondition(upos15m > upos15m[1] or (isBigCandle and close > open), 'Upward Breakout', 'Price broke the down-trendline upward or Green Big candle')
+alertcondition(dnos15m > dnos15m[1] or (isBigCandle and close < open), 'Downward Breakout', 'Price broke the up-trendline downward or Red Big candle')
 
 //-----------------------------------------------------------------------------}
