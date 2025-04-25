@@ -49,16 +49,16 @@ slope = switch calcMethod
     'Linreg' => math.abs(ta.sma(src * n, length) - ta.sma(src, length) * ta.sma(n, length)) / ta.variance(n, length) / 2 * mult
 
 //Get slopes and calculate trendlines
-slope_ph := bool(ph) ? slope : slope_ph
-slope_pl := bool(pl) ? slope : slope_pl
+slope_ph := not na(ph) ? slope : slope_ph
+slope_pl := not na(pl) ? slope : slope_pl
 
-upper := bool(ph) ? ph : upper - slope_ph
-lower := bool(pl) ? pl : lower + slope_pl
+upper := not na(ph) ? ph : upper - slope_ph
+lower := not na(pl) ? pl : lower + slope_pl
 
 var upos = 0
 var dnos = 0
-upos := bool(ph) ? 0 : close > upper - slope_ph * length ? 1 : upos
-dnos := bool(pl) ? 0 : close < lower + slope_pl * length ? 1 : dnos
+upos := not na(ph) ? 0 : close > upper - slope_ph * length ? 1 : upos
+dnos := not na(pl) ? 0 : close < lower + slope_pl * length ? 1 : dnos
 
 
 //===>Big Candle - Calculations<=== 
@@ -91,11 +91,11 @@ isBigCandle = candlePercentage >= percentageThreshold
 var uptl  = line.new(na,na,na,na, color = upCss, style = line.style_dashed, extend = extend.right)
 var dntl  = line.new(na,na,na,na, color = dnCss, style = line.style_dashed, extend = extend.right)
 
-if bool(ph) and showExt
+if not na(ph) and showExt
     uptl.set_xy1(n-offset, backpaint ? ph : upper - slope_ph * length)
     uptl.set_xy2(n-offset+1, backpaint ? ph - slope : upper - slope_ph * (length+1))
 
-if bool(pl) and showExt
+if not na(pl) and showExt
     dntl.set_xy1(n-offset, backpaint ? pl : lower + slope_pl * length)
     dntl.set_xy2(n-offset+1, backpaint ? pl + slope : lower + slope_pl * (length+1))
 
@@ -103,8 +103,8 @@ if bool(pl) and showExt
 //Plots
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Plots<=== 
-plot(backpaint ? upper : upper - slope_ph * length, 'Upper', color = bool(ph) ? na : upCss, offset = -offset)
-plot(backpaint ? lower : lower + slope_pl * length, 'Lower', color = bool(pl) ? na : dnCss, offset = -offset)
+plot(backpaint ? upper : upper - slope_ph * length, 'Upper', color = not na(ph) ? na : upCss, offset = -offset)
+plot(backpaint ? lower : lower + slope_pl * length, 'Lower', color = not na(pl) ? na : dnCss, offset = -offset)
 
 //Breakouts
 plotshape(upos > upos[1] ? low : na, "Upper Break"
