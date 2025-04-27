@@ -10,8 +10,10 @@ mult = input.float(0., 'Slope', minval = 0, step = .1, group = 'TrendLine Breako
 calcMethod = input.string('Atr', 'Slope Calculation Method', options = ['Atr','Stdev','Linreg'], group = 'TrendLine Breakouts')
 backpaint = input(true, tooltip = 'Backpainting offset displayed elements in the past. Disable backpainting to see real time information returned by the indicator.', 
               group = 'TrendLine Breakouts')
-showTL = input(true, 'Show Trendlines', group = 'TrendLine Breakouts')
-showTLBO = input(true, 'Show Trendlines Breakouts', group = 'TrendLine Breakouts')
+showTL15m = input(true, 'Show 15m Trendlines', group = 'TrendLine Breakouts')
+showTLBO15m = input(true, 'Show 15m Trendlines Breakouts', group = 'TrendLine Breakouts')
+showTL3m = input(true, 'Show 3m Trendlines', group = 'TrendLine Breakouts')
+showTLBO3m = input(true, 'Show 3m Trendlines Breakouts', group = 'TrendLine Breakouts')
 showExt = input(true, 'Show Extended Lines', group = 'TrendLine Breakouts')
 
 //===>Big Candle - Calculation - Inputs<=== 
@@ -123,14 +125,14 @@ if not na(pl3m) and showExt
 //Plots
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Plots<=== 
-plot(backpaint and showTL ? upper15m : showTL ? upper15m - slope_ph15m * length : na, 'Upper', color = not na(ph15m) ? na : upCss, offset = -offset)
-plot(backpaint and showTL ? lower15m : showTL ? lower15m + slope_pl15m * length : na, 'Lower', color = not na(pl15m) ? na : dnCss, offset = -offset)
+plot(backpaint and showTL15m ? upper15m : showTL15m ? upper15m - slope_ph15m * length : na, 'Upper 15m', color = not na(ph15m) ? na : upCss, offset = -offset)
+plot(backpaint and showTL15m ? lower15m : showTL15m ? lower15m + slope_pl15m * length : na, 'Lower 15m', color = not na(pl15m) ? na : dnCss, offset = -offset)
 
-plot(backpaint and showTL ? upper3m : showTL ? upper3m - slope_ph3m * length : na, 'Upper', color = not na(ph3m) ? na : upCss, offset = -offset)
-plot(backpaint and showTL ? lower3m : showTL ? lower3m + slope_pl3m * length : na, 'Lower', color = not na(pl3m) ? na : dnCss, offset = -offset)
+plot(backpaint and showTL3m ? upper3m : showTL3m ? upper3m - slope_ph3m * length : na, 'Upper 3m', color = not na(ph3m) ? na : upCss, offset = -offset)
+plot(backpaint and showTL3m ? lower3m : showTL3m ? lower3m + slope_pl3m * length : na, 'Lower 3m', color = not na(pl3m) ? na : dnCss, offset = -offset)
 
 //Breakouts
-plotshape(showTLBO and upos15m > upos15m[1] ? low : na, "Upper Break"
+plotshape(showTLBO15m and upos15m > upos15m[1] ? low : na, "Upper Break 15m"
   , shape.labelup
   , location.absolute
   , upCss
@@ -138,7 +140,7 @@ plotshape(showTLBO and upos15m > upos15m[1] ? low : na, "Upper Break"
   , textcolor = color.white
   , size = size.tiny)
 
-plotshape(showTLBO and dnos15m > dnos15m[1] ? high : na, "Lower Break"
+plotshape(showTLBO15m and dnos15m > dnos15m[1] ? high : na, "Lower Break 15m"
   , shape.labeldown
   , location.absolute
   , dnCss
@@ -146,7 +148,7 @@ plotshape(showTLBO and dnos15m > dnos15m[1] ? high : na, "Lower Break"
   , textcolor = color.white
   , size = size.tiny)
 
-plotshape(showTLBO and upos3m > upos3m[1] ? low : na, "Upper Break"
+plotshape(showTLBO3m and upos3m > upos3m[1] ? low : na, "Upper Break 3m"
   , shape.labelup
   , location.absolute
   , upCss
@@ -154,7 +156,7 @@ plotshape(showTLBO and upos3m > upos3m[1] ? low : na, "Upper Break"
   , textcolor = color.white
   , size = size.tiny)
 
-plotshape(showTLBO and dnos3m > dnos3m[1] ? high : na, "Lower Break"
+plotshape(showTLBO3m and dnos3m > dnos3m[1] ? high : na, "Lower Break 3m"
   , shape.labeldown
   , location.absolute
   , dnCss
