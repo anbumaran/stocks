@@ -30,10 +30,6 @@ dnCss = input.color(color.red, 'Down Trendline Color', group = 'Style')
 //Calculations
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Calculations<=== 
-//var upper = 0.
-//var lower = 0.
-//var slope_ph = 0.
-//var slope_pl = 0.
 
 var offset = backpaint ? length : 0
 
@@ -115,19 +111,30 @@ if not na(pl15m) and showExt
     dntl.set_xy1(n-offset, backpaint ? pl15m : lower15m + slope_pl15m * length)
     dntl.set_xy2(n-offset+1, backpaint ? pl15m + slope15m : lower15m + slope_pl15m * (length+1))
 
+if not na(ph3m) and showExt
+    uptl.set_xy1(n-offset, backpaint ? ph3m : upper3m - slope_ph3m * length)
+    uptl.set_xy2(n-offset+1, backpaint ? ph3m - slope3m : upper3m - slope_ph3m * (length+1))
+
+if not na(pl3m) and showExt
+    dntl.set_xy1(n-offset, backpaint ? pl3m : lower3m + slope_pl3m * length)
+    dntl.set_xy2(n-offset+1, backpaint ? pl3m + slope3m : lower3m + slope_pl3m * (length+1))
+
 //-----------------------------------------------------------------------------}
 //Plots
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Plots<=== 
-plot(backpaint ? upper15m : showTL ? upper15m - slope_ph15m * length : na, 'Upper', color = not na(ph15m) ? na : upCss, offset = -offset)
-plot(backpaint ? lower15m : showTL ? lower15m + slope_pl15m * length : na, 'Lower', color = not na(pl15m) ? na : dnCss, offset = -offset)
+plot(backpaint and showTL ? upper15m : showTL ? upper15m - slope_ph15m * length : na, 'Upper', color = not na(ph15m) ? na : upCss, offset = -offset)
+plot(backpaint and showTL ? lower15m : showTL ? lower15m + slope_pl15m * length : na, 'Lower', color = not na(pl15m) ? na : dnCss, offset = -offset)
+
+plot(backpaint and showTL ? upper3m : showTL ? upper3m - slope_ph3m * length : na, 'Upper', color = not na(ph3m) ? na : upCss, offset = -offset)
+plot(backpaint and showTL ? lower3m : showTL ? lower3m + slope_pl3m * length : na, 'Lower', color = not na(pl3m) ? na : dnCss, offset = -offset)
 
 //Breakouts
 plotshape(showTLBO and upos15m > upos15m[1] ? low : na, "Upper Break"
   , shape.labelup
   , location.absolute
   , upCss
-  , text = "B"
+  , text = "u15"
   , textcolor = color.white
   , size = size.tiny)
 
@@ -135,7 +142,23 @@ plotshape(showTLBO and dnos15m > dnos15m[1] ? high : na, "Lower Break"
   , shape.labeldown
   , location.absolute
   , dnCss
-  , text = "B"
+  , text = "d15"
+  , textcolor = color.white
+  , size = size.tiny)
+
+plotshape(showTLBO and upos3m > upos3m[1] ? low : na, "Upper Break"
+  , shape.labelup
+  , location.absolute
+  , upCss
+  , text = "u3"
+  , textcolor = color.white
+  , size = size.tiny)
+
+plotshape(showTLBO and dnos3m > dnos3m[1] ? high : na, "Lower Break"
+  , shape.labeldown
+  , location.absolute
+  , dnCss
+  , text = "d3"
   , textcolor = color.white
   , size = size.tiny)
 
