@@ -17,11 +17,13 @@ showTLBO3m = input(true, 'Show 3m Trendlines Breakouts', group = 'TrendLine Brea
 showExt = input(true, 'Show Extended Lines', group = 'TrendLine Breakouts')
 
 //===>Big Candle - Calculation - Inputs<=== 
-percentageThreshold = input.float(0.15, title="Percentage Threshold (%)", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
+percentageThreshold15m = input.float(0.15, title="Percentage Threshold (%) for 15m", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
+percentageThreshold3m = input.float(0.15, title="Percentage Threshold (%) for 3m", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
 candleSizeMethod = input.string("Prev Close to Current Close", title="Candle Size Calculation Method", 
      options=["Open-Close", "High-Low", "Open-High", "Open-Low", "Prev Close to Current Close", "Prev Close to Current Open"], group = 'Big Candle')
-bgcolorBigCd = input.bool(false, 'Show Big Candle background', group = 'Big Candle')
-showBigCd = input(true, 'Show Big Candles', group = 'Big Candle')
+
+showBigCd15m = input(true, 'Show Big Candles 15m', group = 'Big Candle')
+showBigCd3m = input(true, 'Show Big Candles 3m', group = 'Big Candle')
 
 //Style
 upCss = input.color(color.green, 'Up Trendline Color', group = 'Style')
@@ -75,28 +77,38 @@ getTrendLineBreakout(_timeFrame) =>
 [upos3m, dnos3m, ph3m, pl3m, upper3m, lower3m, slope_ph3m, slope_pl3m, slope3m] = getTrendLineBreakout("3")
 
 //===>Big Candle - Calculations<=== 
-candleSize = switch candleSizeMethod
-    "Open-Close" => math.abs(close - open)
-    "High-Low" => high - low
-    "Open-High" => high - open
-    "Open-Low" => open - low
-    "Prev Close to Current Close" => math.abs(close - nz(close[1]))
-    "Prev Close to Current Open" => math.abs(open - nz(close[1]))
 
-// Calculate the percentage difference
-basePrice = switch candleSizeMethod
-    "Open-Close" => open
-    "High-Low" => open
-    "Open-High" => open
-    "Open-Low" => open
-    "Prev Close to Current Close" => nz(close[1])
-    "Prev Close to Current Open" => nz(close[1])
+getBigCandle(_timeFrame, _percentageThreshold) =>
+    openTF = request.security(syminfo.tickerid, _timeFrame, open)
+    highTF = request.security(syminfo.tickerid, _timeFrame, high)
+    lowTF = request.security(syminfo.tickerid, _timeFrame, low)
+    closeTF = request.security(syminfo.tickerid, _timeFrame, close)
+  
+    candleSize = switch candleSizeMethod
+        "Open-Close" => math.abs(closeTF - openTF)
+        "High-Low" => highTF - lowTF
+        "Open-High" => highTF - openTF
+        "Open-Low" => openTF - lowTF
+        "Prev Close to Current Close" => math.abs(closeTF - nz(closeTF[1]))
+        "Prev Close to Current Open" => math.abs(openTF - nz(closeTF[1]))
+    
+    // Calculate the percentage difference
+    basePrice = switch candleSizeMethod
+        "Open-Close" => openTF
+        "High-Low" => openTF
+        "Open-High" => openTF
+        "Open-Low" => openTF
+        "Prev Close to Current Close" => nz(closeTF[1])
+        "Prev Close to Current Open" => nz(closeTF[1])
 
-candlePercentage = (candleSize / basePrice) * 100
+    candlePercentage = (candleSize / basePrice) * 100
+  
+    // Check if the candle is big
+    isBigCandle = candlePercentage >= percentageThreshold15m
+    [isBigCandle, openTF, closeTF]
 
-// Check if the candle is big
-isBigCandle = candlePercentage >= percentageThreshold
-
+[isBigCandle15m, open15m, close15m] = getBigCandle("15", percentageThreshold15m)
+[isBigCandle3m, open3m, close3m] = getBigCandle("3", percentageThreshold3m)
 
 //-----------------------------------------------------------------------------}
 //Extended Lines
@@ -165,17 +177,16 @@ plotshape(showTLBO3m and dnos3m > dnos3m[1] ? high : na, "Lower Break 3m"
   , size = size.tiny)
 
 //===>Big Candle - Plots<=== 
-plotshape(series=isBigCandle and close > open and showBigCd, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc", textcolor=color.white)
-plotshape(series=isBigCandle and close < open and showBigCd, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc", textcolor=color.white)
+plotshape(series=isBigCandle15m and close15m > open15m and showBigCd15m, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc15", textcolor=color.white)
+plotshape(series=isBigCandle15m and close15m < open15m and showBigCd15m, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc15", textcolor=color.white)
 
-// Optionally, highlight the background of big candles
-
-bgcolor(isBigCandle and bgcolorBigCd ? (close > open ? color.new(upCss, 85) : color.new(dnCss, 85)) : na) 
+plotshape(series=isBigCandle3m and close3m > open3m and showBigCd3m, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc3", textcolor=color.white)
+plotshape(series=isBigCandle3m and close3m < open3m and showBigCd3m, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc3", textcolor=color.white)
 
 //-----------------------------------------------------------------------------}
 //Alerts
 //-----------------------------------------------------------------------------{
-alertcondition(upos15m > upos15m[1] or (isBigCandle and close > open), 'Upward Breakout', 'Price broke the down-trendline upward or Green Big candle')
-alertcondition(dnos15m > dnos15m[1] or (isBigCandle and close < open), 'Downward Breakout', 'Price broke the up-trendline downward or Red Big candle')
+alertcondition(upos15m > upos15m[1] or (isBigCandle15m and close > open), 'Upward Breakout', 'Price broke the down-trendline upward or Green Big candle')
+alertcondition(dnos15m > dnos15m[1] or (isBigCandle15m and close < open), 'Downward Breakout', 'Price broke the up-trendline downward or Red Big candle')
 
 //-----------------------------------------------------------------------------}
