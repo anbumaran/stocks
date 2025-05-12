@@ -5,11 +5,15 @@ indicator("Trendlines with Breaks and Big Candle [AA]", "TL BO BCd", overlay = t
 //Settings
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Inputs<=== 
+showBulls = input(true, 'Show Bulls (combined)', group = 'Bulls or Bears')
+showBears = input(true, 'Show Bears (combined)', group = 'Bulls or Bears')
+
 length = input.int(2, 'Swing Detection Lookback', group = 'TrendLine Breakouts')
 mult = input.float(0., 'Slope', minval = 0, step = .1, group = 'TrendLine Breakouts')
 calcMethod = input.string('Atr', 'Slope Calculation Method', options = ['Atr','Stdev','Linreg'], group = 'TrendLine Breakouts')
 backpaint = input(true, tooltip = 'Backpainting offset displayed elements in the past. Disable backpainting to see real time information returned by the indicator.', 
               group = 'TrendLine Breakouts')
+
 showTL15m = input(true, 'Show 15m Trendlines', group = 'TrendLine Breakouts')
 showTLBO15m = input(true, 'Show 15m Trendlines Breakouts', group = 'TrendLine Breakouts')
 showTL3m = input(true, 'Show 3m Trendlines', group = 'TrendLine Breakouts')
@@ -143,7 +147,6 @@ plot(backpaint and showTL15m ? lower15m : showTL15m ? lower15m + slope_pl15m * l
 plot(backpaint and showTL3m ? upper3m : showTL3m ? upper3m - slope_ph3m * length : na, 'Upper 3m', color = not na(ph3m) ? na : upCss, offset = -offset)
 plot(backpaint and showTL3m ? lower3m : showTL3m ? lower3m + slope_pl3m * length : na, 'Lower 3m', color = not na(pl3m) ? na : dnCss, offset = -offset)
 
-//Breakouts
 plotshape(showTLBO15m and upos15m > upos15m[1] ? low : na, "Upper Break 15m"
   , shape.labelup
   , location.absolute
@@ -177,11 +180,53 @@ plotshape(showTLBO3m and dnos3m > dnos3m[1] ? high : na, "Lower Break 3m"
   , size = size.tiny)
 
 //===>Big Candle - Plots<=== 
-plotshape(series=isBigCandle15m and close15m > open15m and showBigCd15m, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc15", textcolor=color.white)
-plotshape(series=isBigCandle15m and close15m < open15m and showBigCd15m, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc15", textcolor=color.white)
+plotshape(series=isBigCandle15m and close15m > open15m and showBigCd15m
+ , style=shape.labelup
+ , location=location.belowbar
+ , color=upCss
+ , size=size.tiny
+ , text="Bc15"
+ , textcolor=color.white)
 
-plotshape(series=isBigCandle3m and close3m > open3m and showBigCd3m, style=shape.labelup, location=location.belowbar, color=upCss, size=size.tiny, text="Bc3", textcolor=color.white)
-plotshape(series=isBigCandle3m and close3m < open3m and showBigCd3m, style=shape.labeldown, location=location.abovebar, color=dnCss, size=size.tiny, text="Bc3", textcolor=color.white)
+plotshape(series=isBigCandle15m and close15m < open15m and showBigCd15m
+ , style=shape.labeldown
+ , location=location.abovebar
+ , color=dnCss, size=size.tiny
+ , text="Bc15"
+ , textcolor=color.white)
+
+plotshape(series=isBigCandle3m and close3m > open3m and showBigCd3m
+ , style=shape.labelup
+ , location=location.belowbar
+ , color=upCss, size=size.tiny
+ , text="Bc3"
+ , textcolor=color.white)
+
+plotshape(series=isBigCandle3m and close3m < open3m and showBigCd3m
+ , style=shape.labeldown
+ , location=location.abovebar
+ , color=dnCss, size=size.tiny
+ , text="Bc3"
+ , textcolor=color.white)
+
+
+//===>strategy - Trendlines with Breaks & Big Candle - Plots<=== 
+
+
+//var float bulls = na
+//if showBulls and ((upos3m > upos3m[1]) or (isBigCandle3m and close3m > open3m))
+//    bulls := low
+//else
+//    bulls := na
+
+plotshape(showBulls and ((upos3m > upos3m[1]) or (isBigCandle3m and close3m > open3m)) ? low : na
+ , style=shape.labelup
+ , location=location.belowbar
+ , color=upCss, size=size.tiny
+ , text="Bulls"
+ , textcolor=color.white)
+
+
 
 //-----------------------------------------------------------------------------}
 //Alerts
