@@ -5,8 +5,11 @@ indicator("Trendlines with Breaks and Big Candle [AA]", "TL BO BCd", overlay = t
 //Settings
 //-----------------------------------------------------------------------------{
 //===>Trendlines with Breaks - Inputs<=== 
-showBulls = input(true, 'Show Bulls (combined)', group = 'Bulls or Bears')
-showBears = input(true, 'Show Bears (combined)', group = 'Bulls or Bears')
+showBulls3m = input(true, 'Show Bulls 3m', group = 'Bulls or Bears')
+showBears3m = input(true, 'Show Bears 3m', group = 'Bulls or Bears')
+
+showBulls15m = input(true, 'Show Bulls 15m', group = 'Bulls or Bears')
+showBears15m = input(true, 'Show Bears 15m', group = 'Bulls or Bears')
 
 length = input.int(2, 'Swing Detection Lookback', group = 'TrendLine Breakouts')
 mult = input.float(0., 'Slope', minval = 0, step = .1, group = 'TrendLine Breakouts')
@@ -22,7 +25,7 @@ showExt = input(true, 'Show Extended Lines', group = 'TrendLine Breakouts')
 
 //===>Big Candle - Calculation - Inputs<=== 
 percentageThreshold15m = input.float(0.15, title="Percentage Threshold (%) for 15m", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
-percentageThreshold3m = input.float(0.15, title="Percentage Threshold (%) for 3m", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
+percentageThreshold3m = input.float(0.10, title="Percentage Threshold (%) for 3m", minval=0.01, step=0.01, tooltip="Minimum percentage difference to consider a candle as 'big'.", group = 'Big Candle')
 candleSizeMethod = input.string("Prev Close to Current Close", title="Candle Size Calculation Method", 
      options=["Open-Close", "High-Low", "Open-High", "Open-Low", "Prev Close to Current Close", "Prev Close to Current Open"], group = 'Big Candle')
 
@@ -108,7 +111,7 @@ getBigCandle(_timeFrame, _percentageThreshold) =>
     candlePercentage = (candleSize / basePrice) * 100
   
     // Check if the candle is big
-    isBigCandle = candlePercentage >= percentageThreshold15m
+    isBigCandle = candlePercentage >= _percentageThreshold
     [isBigCandle, openTF, closeTF]
 
 [isBigCandle15m, open15m, close15m] = getBigCandle("15", percentageThreshold15m)
@@ -212,26 +215,47 @@ plotshape(series=isBigCandle3m and close3m < open3m and showBigCd3m
 
 //===>strategy - Trendlines with Breaks & Big Candle - Plots<=== 
 
+bulls3m = showBulls3m and ((upos3m > upos3m[1]) or (isBigCandle3m and close3m > open3m))
+bulls15m = showBulls15m and ((upos15m > upos15m[1]) or (isBigCandle15m and close15m > open15m))
 
-//var float bulls = na
-//if showBulls and ((upos3m > upos3m[1]) or (isBigCandle3m and close3m > open3m))
-//    bulls := low
-//else
-//    bulls := na
+bears3m = showBears3m and ((dnos3m > dnos3m[1]) or (isBigCandle3m and close3m < open3m))
+bears15m = showBears15m and ((dnos15m > dnos15m[1]) or (isBigCandle15m and close15m < open15m))
 
-plotshape(showBulls and ((upos3m > upos3m[1]) or (isBigCandle3m and close3m > open3m)) ? low : na
+plotshape(bulls3m 
  , style=shape.labelup
  , location=location.belowbar
  , color=upCss, size=size.tiny
- , text="Bulls"
+ , text="B3"
  , textcolor=color.white)
 
+plotshape(bulls15m 
+ , style=shape.labelup
+ , location=location.belowbar
+ , color=upCss, size=size.tiny
+ , text="B15"
+ , textcolor=color.white)
 
+plotshape(bears3m
+ , style=shape.labeldown
+ , location=location.abovebar
+ , color=dnCss, size=size.tiny
+ , text="S3"
+ , textcolor=color.white)
+
+plotshape(bears15m
+ , style=shape.labeldown
+ , location=location.abovebar
+ , color=dnCss, size=size.tiny
+ , text="S15"
+ , textcolor=color.white)
 
 //-----------------------------------------------------------------------------}
 //Alerts
 //-----------------------------------------------------------------------------{
-alertcondition(upos15m > upos15m[1] or (isBigCandle15m and close > open), 'Upward Breakout', 'Price broke the down-trendline upward or Green Big candle')
-alertcondition(dnos15m > dnos15m[1] or (isBigCandle15m and close < open), 'Downward Breakout', 'Price broke the up-trendline downward or Red Big candle')
+
+alertcondition(bulls3m, '3m Up side Breakout', '3m Price broke the down-trendline upward or Big Green candle')
+alertcondition(bulls15m, '15m Up side Breakout', '15m Price broke the down-trendline upward or Big Green candle')
+alertcondition(bears3m, '3m Down side Breakout', '3m Price broke the up-trendline upward or Big Red candle')
+alertcondition(bears15m, '15m Down side Breakout', '3m Price broke the up-trendline upward or Big Red candle')
 
 //-----------------------------------------------------------------------------}
