@@ -1,18 +1,56 @@
-
-~-~-~Praise The LORD JESUS~-~-~
-If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you. 
-- James 1:5
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Trend decider - Sport | Futures – 5 min | 15 min | 1 hr | 1 Day: 
 
-15 min - Trend Line break  
+TL to be connecting using swings only, use LuxAlgo Trendline swing with lookback 3  
 
-15 min - Double Top (DT) | Double Bottom(DT) - RSI divergence is must, price can be equal 
+Reversal on Strong Bullish or Bearish day (RSI >55 and <45 in both 1 hr. & 15 min) only below conditions are satisfied 
+
+15 min – Trend line BO candle close is must 
+
+Previous swing is too steep, then ignore TL, candle close above / below previous swing high / low  
+
+Double Top (DT) | Double Bottom(DT) - RSI divergence is must in both 5 min | 15 min 
+
+Trend Side  
+
+TL break in 3 min | 5 min in Option is sufficient  
 
 High Probability - Combine DB/DT with Trend...In downtrend try DT | In uptrend try DB 
 
-Reversal DB/DT must have Trend line BO + RSI not >60 & <40 in 1 Hr. & 15 min  
+Trend Side – DB / DT – just 5 min divergence is sufficient  
+
+Re-Entry – Option Buy (after Trend side confirmation): 
+
+3 min | 5 min – Bullish engulf (when no swing is there) - break above previous candle high candle (on aggressive move) close confirmation is always the best , not recommended in sideways market  
+
+3 min | 5 min - Bullish Trend line break out (Once two swing is formed for TL) – candle close confirmation - connecting lower top swing highs   
+
+Option - Initial & Partial stoploss(50%) 
+
+Initial SL - Entry Breakout (BO) candle low | Previous candle of Entry BO candle low 
+
+Initial Targets - 5 min Option chart – Book 50% at Initial Target say 50EMA, VWAP(Century), VWAP 200 EMA using Limit Order, reversal trade initial target 50 EMA, if above 50 EMA then target 200 EMA 
+
+Remaining position keep trailing stoploss or entry price (not to get into loss)  
+
+Option – Trailing stoploss (50%)  
+
+On non-aggressive move 5 min | 3 min chart - Swing lows  
+
+On Aggressive Wave C move -  Previous 5 min | 3 min - Solid Candle low / Red Candle low followed by Green Candles  
+
+Red candle close below 5 EMA in 5 min | 3 min 
+
+Keep Trailing Stoploss if you are not able to view the market (may be meeting or sleeping)  
+
+Option - Ultimate Targets: 
+
+15 min Option chart - Ultimate Target - Trend line | Resistance Zone, also keep watch for Wave C 
+
+Spot | Future - Trend Line & Swing - Resistance & Support in 15 min | 1 hour chart  
+
+ 
+
+------------------------------------------------------------------------------------------------------------------------------------------ 
 
 15 min - Watch out for Head & Shoulder pattern – Break out  
 
@@ -20,19 +58,29 @@ Need to watch out for RS zone and TL in both Spot and Futures
 
 OR Trade  - 5 min | 10 min | 15 min - Trend Line break in GIFT Nifty, better avoid first 5 min ~ 10 min to avoid violent moves, since GIFT Nifty have continues chart than Nifty  
 
-If RSI is >60 | <40 in both 15 min & 1 hr chart then it is strong trending momentum  
-
 Option OI Chart should support the move for further and immediate move – when prices moves up, Calls unwind and Puts add, vise-versa. If not there, then it will find Resistance or Support 
+
+TL BO will fail if  
+
+No divergence in 15 mins TF of SPOT 
+
+If price is not bouncing from support 
 
 On Expiry day OI works very well as cheap contract create huge build up, so always try in the money contracts even on expiry 
 
-Risky to trade long when 15 min sport RSI > 80 & <20, preferred range 60~80 & 40~20 
+Risky to trade long & shot when 15 min sport RSI > 80 & <20  
 
-  
+Resistance & Support Zone  
 
-Resistance & Support Zone – 15 min & 1 Hr - Draw rectangle covering many swings and congestion zones  
+15 min & 1 Hr - Draw rectangle covering many swings and congestion zones  
 
 Trend line (TL) - Draw line touching as much as possible swing Closing price, wick High & Lows (its ok if few places cut candles)  
+
+Trend line which previous provided support do act as resistance after they broke esp on pull back. This is effective when other RS zone also exist there  
+
+Previous Day High & Low  
+
+CPR – Central Pivotal Range, Virgin CPR 
 
  
 
@@ -51,51 +99,23 @@ Entry – Option Buy chart - Aligned to Sport | Futures - Trend deciders:
 
 15 min & 5 min – Bullish RSI divergence (even if price is below 50 EMA) + Bullish engulf candle close above previous red candle | Hammer  
 
+Sideways in the last 1 hour of Previous day and the next day if TL BO happens then enter 
+
 Option price between 120 to 200+ (not beyond 250) give good move 
 
   
-
-Re-Entry – Option Buy: 
-
-3 min | 5 min - Bullish engulf - break above previous candle high, candle close confirmation is always the best on aggressive move 
-
-3 min | 5 min - Bullish Trend line break - connecting lower top swing highs   
 
  
 
 Initial Option Buy - Stoploss & Targets 
 
-Initial SL - Entry Breakout (BO) candle low | Previous candle of Entry BO candle low 
-
-Initial Targets - 5 min Option chart – Book 50% at Initial Target say 50EMA, VWAP(Century), VWAP 200 EMA using Limit Order  
-
 Hold the remaining 50% with Trailing SL Order, if position closed then use Re-Entry methods  
 
-Option buying behave Elliot ABC corrective patter with wave C being ferocious up move, as majority  impulse move is down side! 
-
-After initial Target, prices will correct, Try to catch the third Wave C once price break corrective trend lines & always keep Trailing SL to catch full move  
-
   
-
-Trailing Stoploss - Option chart  
-
-On non-aggressive move 5 min | 3 min chart - Swing lows  
-
-On Aggressive Wave C move -  Previous 5 min | 3 min - Solid Candle low | Red Candle low followed by Green Candles  
-
-Red candle close below 5 EMA in 5 min | 3 min 
 
  
 
-Ultimate Option -Targets: 
-
-15 min Option chart - Ultimate Target - Trend line | Resistance Zone, also keep watch for Wave C 
-
-Spot | Future - Trend Line & Swing - Resistance & Support in 15 min | 1 hour chart  
-
  
-
-  
 
 NO Trade - Consolidation day - Spot price oscillate within: 
 
@@ -105,8 +125,6 @@ Previous Day Range
 
 Flat 5min 20 EMA 
 
-  
-
 Risk Management: 
 
 Do NOT lose more than 2% of your capital per day, 0.5% of capital risk per Trade 
@@ -114,6 +132,8 @@ Do NOT lose more than 2% of your capital per day, 0.5% of capital risk per Trade
 Target 2% profit with risk is 1% 
 
 Option buying 10% of Capital 
+
+Do NOT trade first 15 min of open due to unpredictable violent moves as well as last 15 min due to limited movement  
 
 Stop trading (Freeze Trading A/C) for the rest of the day if 2 stoploss are hit, example each stoploss value Rs.3000, then max loss Rs.6000 for the day 
 
@@ -124,6 +144,8 @@ Do not lose more than 30% of the profit or more than 50% of profit if profit val
 Index Option trading – only Intraday   
 
 if we don't do partial booking, we would be in panic mode always.. 
+
+Partial book and moving SL rest of the position to buy price will ensue we go negative and always close with min profit  
 
   
 
@@ -148,9 +170,16 @@ Notes:
 
 7 tips for becoming a successful day trader - https://www.quora.com/What-are-some-tips-for-becoming-a-successful-day-trader/answer/Shraddha-Nanchahil 
 
+My Worst Trade of 2023 - Option Buying  
+
+ 
+
+
 Spot chart for directions 
 
 Option chart for refined entry and for target levels 
+
+NO TL BO in OPTIONS,  NO TRADE 
 
 OI vs Premium chart to see what kind of movement could be expected 
 
@@ -158,11 +187,37 @@ Downtrend, when small gap-up happens, and when price takes support of that open 
 
 Counter trend beyond 5 min 200 EMA is not suggested unless reversal is confirmed in 15 min | 1 Hr    
 
+Option buying behave Elliot ABC corrective patter with wave C being ferocious up move, as majority  impulse move is down side! 
+
+After initial Target, prices will correct, Try to catch the third Wave C once price break corrective trend lines & always keep Trailing SL to catch full move  
+
+TL / RS – breakout confirmation means 3 min | 5 min – candle close only not wicks  
+
 Expiry day reversal – after 1 pm – see 15 min TF divergence, enter once 5 min Trend line Breakout  
 
-Try 1 lot, see you can achieve 200 points profit  + 1 month has to pass – to confirm you can hold 200 points profit, then double the lot size, like this increase  
+Try 1 lot,  achieve 200 points profit  + 1 month has to pass – to confirm you can hold 200 points profit, then double the lot size, like this increase  
 
 Safe Trading – not  more than 3 trades in a day and not averaging  
+
+YES==>> Small Profit, Big Profit, Small Loss (Planned setups, Strict original SL level, Profit trailing, Target booking, Limiting the number of trades per day) 
+
+NO==>> Big Loss (No risk management) 
+
+NO==>> Bad Profit, Bad Loss (based on random entries) 
+
+Spot chart is to decide which direction to trade and also to roughly find out when to trade, ultimate targets of overall move 
+
+Option chart is for accurate entry and exit 
+
+TL BO in either 4 hrs. (candle close confirmation) or Daily TF for buying options positionally 
+
+Morning Star & Evening Star + Higher Low | Lower Top – indicate start of impulsive wave  
+
+Back test any strategy with 50 ~ 100 examples  
+
+VWAP Auto Anchor in Option Chart with Anchor Period as Century, this can be used as entry and target. Usually Option expiry at this point  
+
+If Target is not clear, then go for option selling in the favorable direction instead of option buying  
 
 Candle patter 
 
@@ -175,10 +230,38 @@ TL should always start from the top
 
 Connecting 1st 2 swing high is critical for the main trend 
 
- and another TL can be drawn connecting further swing highs 
+and another TL can be drawn connecting further swing highs 
+
+find a TL that has 3 touch points before the BO. (can view to lower TF like 1 min | 3 min)  
 
  
 
  
 
-Notes – completed till 30 Sep 2025 from Muruganatham chats  
+Notes – completed till 20 Oct 2025 from Muruganatham chats  
+
+ 
+
+ 
+
+Daily Trade lesions: 
+
+Failed to keep Trailing SL to reap full benefit  
+
+Keep proper initial SL & trail SL either previous candle low or 5 EMA in 3 min | 5 min 
+
+Bet downside when RSI is above 60 in both 15 min & 60 min  
+
+Brought option without TL Break  
+
+Partial booking is not done, close with buy price without any profit  
+
+Do not rebuy near option resistance as well as Spot RS zone. Wait for clear breakout otherwise rebuy will hit stoploss in consolidation  
+
+A breakout may hit stop loss, but if it breaks out again in the same direction then the move will be very strong. This is to weed out  weak hands. 
+
+Better use 5 min close confirmation than 3 min  close confirmation, 3 min can be used to draw trend lines 
+
+SL also 5 min solid candle low is good or Red low in case red-green-green, in case of 3 min swing low will be better. In case there is slow movement  
+
+Don’t risk much against trend as well as when OI & change OI is not supporting  
