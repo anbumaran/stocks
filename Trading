@@ -1,4 +1,4 @@
-~-~-~Praise The LORD JESUS~-~-~  
+~-~-~Praise The LORD JESUS~-~-~ )  
 
 If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault, and it will be given to you.  
 
@@ -12,47 +12,47 @@ First 45 min ORB trade base on GIFT Nifty (continues chart than Nifty) Trend Lin
 
 Consolidation in the last 1 hour of Previous day, Enter if TL BO in next day 
 
-Sport - Reversal only when break CCC in 5 min above | below - Lower Top | Higher Bottom, Swing before new High | Low (not corrective Swing) in 15 min swing. On pull back only try 15 min Double Top | Bottom + 3 min | 5 min TL BO only when 15 min BO is already confirmed+ RS | TL Zone, Always use swing break in 15 min as direction decider.  
+ 
 
-Spot - Reversal exception to use 15 min BO beyond 50% price retracement CCC can be considered only if all the condition satisfy Swing BO in 5 min CCC + TL BO CCC  + RSI Divergence with DT | DB + Price not near Swing High | Low for double Top | Bottom + There is no 5 min | 15 min Swing available 
+Reversal Conditions – Sport & Option Chart: 
 
-Do not Consider 1 min | 3 min Swing for reversal 
+Sport – 5 min Candle Close Confirmation beyond 5 min N-2 | 15 min N-1 Swing Higher lower | Lower Top, Do NOT use TL BO as it is confusing and bound to fail  
 
-Entry only when Option price is above 21 EMA in 3 min | 5 min, use 5 min if there is strong down trend. 
+15 min RSI divergence + Double Top | Bottom (not far away) near important RS Zone | TL + Swing BO (5 min N-2 | 15 min N-1) is already confirmed  
+
+BO High | Low of Previous Day | Current Day | 15 min Open Candle  
+
+If no 15 min TL | Swing available then 5 min Price aligned to 5 & 21 EMA 
+
+Swing based confirmation Best and proven method after several failures and Double Bottom | Top is essential so expect pull back to initial price levels after initial Swing BO confirmation  
 
  
 
-Option Trend side Entry | Re-Entry - 3 min | 5 min + provided Sport 15 min Trend direction not violated, In the order of Lower to Higher Aggressive: 
+Option Trend side Entry | Re-Entry - 3 min | 5 min + provided Sport 15 min Trend direction not violated,  
 
-Two or more Swing available, No Swing is too steep (<50 degree) to each then draw TL using 5 min & 3 min Swings does not candle cut body with maximum touch point to swings and nearby candles >> Enter once Price crosses & closes above TL in 3 min candle close confirmation (CCC). It will be good have 3 swings (non is too steep) for better TL, Keep SL lowest of Lows of Entry Candle | N-1 Entry candle | Below extended Trend line after BO 
+ 
 
-High Probability - Combine DB/DT with Trend...In downtrend try DT | In uptrend try DB + Just 5 min divergence is sufficient, Double Bottom | Top, there should be strong TL | RS Zone | near and above 15 min 50 / 200 EMA not in between | not too away | not BO >> Enter once TL is BO as said above. 
+Tailing Stop Loss | Swing not violated:  
+
+Aggressive Re-Enter using 1 min - horizontal Rectangular BO | Angular TL BO provided there is Support zone in 1 min, provided prices does not retrace >50% of recent Swing low to Swing High  
+
+Solid Green candle engulf above Solid Red candle in 3 | 5 min 
+
+ 
+
+TSL & Swing broken, but Direction not violated in 15 min 
+
+No Swing available only Solid red candle >> Enter once 5 min Green Candle closes above 50~61% retracement from the low  
 
 Two Swing available, but first one is too steep then don’t use TL | Only one Swing is available >> Enter once Price crosses & closes above recent Swing high with CCC in 3 min | 5 min (preferred)  
 
-Aggressive Re-Enter using 1 min - horizontal Rectangular BO | Angular TL BO provided there is Support zone in 1 min, provided prices does not retrace >50% of Swing low to Swing  
+Two or more Swing available, No Swing is too steep (<50 degree) to each other, then draw TL using 5 min & 3 min Swings does not cut candle body with maximum touch point to swings and nearby candles - close and wicks >> Enter once Price crosses & closes above TL in 3 min candle close confirmation (CCC). It will be good have 3 swings (non is too steep) for better TL, Keep SL lowest of Lows of Entry Candle | N-1 Entry candle | Swing low | Below extended Trend line after BO 
 
-5 min - If Trailing SL | Previous Solid candle low |  Recent Swing low not broken | Too big Swing Price not corrected >50% >> Enter if Solid Green candle engulf and close above the High of Solid Red candle |  High of any failed wicks 
+High Probability - Combine DB/DT with Trend...In downtrend try DT | In uptrend try DB + Just 5 min divergence is sufficient, Double Bottom | Top, there should be strong TL | RS Zone | near and above 15 min 50 / 200 EMA not in between | not too away | not BO >> Enter once TL is BO as said above 
 
-All others entry are not reliable  
+Note: Initial RS | TL BO candle close can be used as stoploss point for re-entry  
 
- 
-
- 
-
- 
-
- 
-
-TL BO candle close can be used as stoploss point for reentry  
-
- 
-
-RS zone - swings, gaps, consolidation zones  
-
- 
-
-Draw TL in 5 min & adjust in 3 min, both body should not cut, wick can be cut, try to have max touch point candles  
+entry  on clear TL by connection swings will give good move than TL connection wicks or not clear swings 
 
  
 
@@ -97,6 +97,8 @@ Trend line which previous provided support do act as resistance after they broke
 Previous Day High & Low  
 
 CPR – Central Pivotal Range, Virgin CPR 
+
+RS zone - swings, gaps, consolidation zones  
 
  
 
@@ -444,3 +446,25 @@ Do NOT go below 3 min for Entry, if market is slow moving use 5 min
 Draw TL Conn. Swing only – TL BO, (Check Swing  using - LuxAlgo Lookback '3') 
 
 Swing BO Lower Top | Higher Bottom on the left, 5 continues candle BO candle close can be equal to TL BO,  3 x 5 min (=15 min) Solid candle engulf can be reversal if other factors support it like Resistance | Support | Trend line + Double Top | Bottom provided above Sport 15 min TF direction is not violated  
+
+ 
+
+Reversal Conditions – Sport & Option Chart: 
+
+Never try for reversal if RSI in 15 min | 1 hr. >60 and <40, Always trend for Trend Side entry instead of counter trend  
+
+Double Top | Bottom near important Resistance Support (RS) Zone / Trend Line (TL), these should be nearby not far away  
+
+Trend Line should be below <45 degree, steep TL indicate either very strong trend | Too steep Swings  
+
+Bull to Bear: - There should be 3 Swing highs and 2 Swing lows to draw support TL 1) if  last Swing high is Lower High enter immediately once TL BO, 2) if wait for retracement to extended Trend line resistance if last swing high is higher high  
+
+Price should be beyond 50 EMA w.r.t direction in 5 min 
+
+Spot & Option – Reversal Raconsidered only if all the condition satisfy – 15 min Swing BO CCC | beyond 50% retracement in 15 min if Swing is too large & 5 min CCC + 5 min TL BO CCC  +  1x or 2x Swing BO in 5 min CCC + 15 min RSI Divergence with DT | DB + Strong RS | TL Zone + Price not near Swing High | Low for double Top | Bottom + RSI in 15 min | 1 hr. not > 60 | < 40 
+
+Note >> Lower Top | Higher Bottom, Swing before new High | Low, not corrective Swing & Do not Consider 1 min | 3 min Swing for reversal 
+
+Entry only when Option price is above 21 EMA in 3 min | 5 min, use 5 min if there is strong down trend. 
+
+To get clarity on swing use  'LuxAlgo Trend – with Swing deduction lookback – 3 setting'  
