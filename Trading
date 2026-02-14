@@ -6,15 +6,49 @@ If any of you lacks wisdom, you should ask God, who gives generously to all with
 
  
 
-5 min Time Frame is the best for intraday, 3 min for aggressive BO CCC only 
+Both Sport and Option chart to concur the move 
+
+Option price is in sync with Future, real buying or selling happens in Options | Futures, so BO need to be confirmed in these charts esp. Option Chart.  
+
+5 min chart is most reliable than small TF like 1 min | 3 min 
+
+5 min BO & Candle Pattern & Solid Candle Close Confirmation (CCC) is very very important for all Entry 
+
+Candle Pattern for BO Entry >>> only when strong Solid close higher with insignificant wick, Avoid if >40% Candle Wick as it is weak and bound to make false BO 
+
+BO & Re-Entry >>> Progressively move BO level of Swing H/L | TL - Higher and Higher | Lower and Lower on every failed Wick | Swing, unless a strong CCC in 5 min as specified above. If no clear swings in 5 min, then to find clear Swing H/L, Trend Line you can use 3 min | 1 min chart but BO much be confirmed in 5 min chart 
+
+Option chart - After large move completes and once red candle appears, never ever re-enter unless a solid green candle with above conditions satisfies  
+
+Entry based on Solid CCC & Engulf pattern only when trend is supporting i.e. HTHB | LTLB. 
+
+Reversal >>> need stronger confirmation, a clear TL BO | Swing BO esp. in 5 min is must, Solid CCC & Engulf pattern is not sufficient. 
 
 Always check HTHB | LTLB pattern + Candle pattern – Solid Candle | Wick size + TL / RS zone 
 
-Candle Close Confirmation (CCC) is must for all entry  
+ 
 
-Both Sport and Option chart to concur the move  
+ 
 
-Target check RS zone in both Sport and Futures  
+First Open 45 min trade should be based on 5~ 15 min ORB, Previous Day High / Low, SGX / GIFT Nifty TL BO. There should be swing available to trade normally 
+
+Use Swing BO than TL BO if recent candles show weak close like >40% candle Wicks 
+
+ BO Failure >>> Next candle falls back into Swing BO line | TL 
+
+Check and Wait for min Swing / TL Target RS zone in both Sport, Futures and Options 
+
+Do NOT enter trade when target is near, as high rate failure and SL hit. 
+
+Enter after BO, Exit at Nearest Target, wait for next candle close, if CCC above the RS zone, then rebuy, ignore wick BO. 
+
+On strong trending day 15 min & 60 min RSI >60 | <40, counter trade only 15 min Swing BO and CCC 
+
+If breakout fails and forms Swing, then adjust TL w.r.t latest swing. 
+
+20 & 50 EMAs can give additional concurrence on BO 
+
+   
 
  
 
@@ -58,7 +92,11 @@ Entry - Aggressive Trend continuation pattern not broken, refer below 'What is T
 
 Engulf Candle pattern - Green CCC above highest of either Solid Rend Candle High | Failed wick high, if no swing is available  
 
+In case of False BO | Double T/B + RS zone – even solid close above / below 5 EMA is sufficient 
+
 Trend Continuation Candle pattern –  Morning / Evening Start 
+
+Hammer | Shooting Start are not sufficient –, they just indicator, only a solid candle CC is needed for entry.  
 
 A lower Swing high available after recent Higher High Swing & TL is too step to draw >>> CCC above lower Swing high 
 
@@ -90,13 +128,15 @@ Central Pivotal Range (CPR) esp. virgin CPR
 
 15 min Open Range – only if price is not broken either side 
 
+100s esp. Near expiry 
+
  
 
-Book Profit & Stoploss – Not more than 7 ~ 10 % of entry price. 
+Book Profit & Stoploss –  
 
-Initial Stoploss - Swing Low | Breakout solid candle Low / N-1 low 
+Initial Stoploss - Swing Low | Breakout solid candle Low / N-1 low – 7~10% 
 
-Trail Stop loss – Solid Candle low | Swing Low 
+Trail Stop loss - 5 ~ 8% - Solid Candle low | Swing Low | Previous candle 5 EMA in 3 | 5 min | 78.6% | 61.2% ~  in Fibonacci – Swing low to Swing high. 
 
 Book Profit – Always wait for Strong RS Zone (ref above) to hit either in Spot | Future – Max value when price troches RS Zone for the first time 
 
@@ -480,59 +520,15 @@ Bought 24700 CE and Sold 24900 CE - this is called Bull Call Spread..
 
  
 
-INR 
-10 
-NIFTY 50 20 OCT 2025 PUT 25700 5 min TF 
-220.0 
-200.0 
-180.0 
-160.0 
-140.0 
-1700 
-115.3 
-100 0 
-95.75 
-80.00 
-60.00 
-54.40 
-01:39 
-51.45 
-20.00 
-60 
-15 
-TF 
-5 
-25 
-35 
-RSI 
-32 
-01:38 
-0.00 
-15:00 
-17 
-10:00 
-10:30 
-11:00 
-11:30 
-12:00 
-12:30 
-13:00 
-13:30 
-14:00 
-14:30 
-15:00 
-20 
-10:00 
-10:30 
-11:00 
-11:30 
  
 
  
 
 TBD>>>-------------------------------------------------------------------------------------------------------------------------------- 
 
-Notes: 
+Notes: Notes – completed till 30 Oct 2025 from Muruganatham chats  
+
+ 
 
  
 
@@ -593,92 +589,96 @@ VWAP Auto Anchor in Option Chart with Anchor Period as Century, this can be used
 
 If Target is not clear, then go for option selling in the favorable direction instead of option buying  
 
+Use VWAP Auto Anchor in Option Chart, With Anchor Period as Century 
+
+The bounces from this VWAP are powerful, look for setup near this VWAP - it can be use for entry or target 
+
+TL Or resistance is the main target / other EMAs and VWAPs are far partial bookings 
+
+during reversal trades, it is better to do partial booking because anytime price can reverse quickly 
+
+1hr and 4hr are in momentum.so we should be very cautions in short trades against larger TF trend, as any dip will be used for buying chance for big players, hence market recovers quickly 
+
+ options buying only if 3 mins TF 50 EMA > 200 EMA.. 
+
+reversal trade with 15 mins and 5 mins divergences 
+
+Support, resistance and major TL in 15 mins.... and small TLs in 5 mins 
+
+major TL means connecting price of 2 to 3 days 
+
+5 mins TL is mainly for intraday swing 
+
+sometimes, SPOT will touch a resistance and starts coming down,, but that time if you look at options, you will see the divergences clearly 
+
+You need to know when to use what...spot is for trend identification, and booking targets and to decide when not to take long trades based on resistance zones.. 
+
+when you know which direction to go, then look for setups in options and entry only when option chart gives go ahead 
+
+ option chart can also be used for targets 
+
+ Spot resistance is first parameter 
+
+Next Option chart divergence is must 
+
+If spot divergence is there then great, otherwise be cautious 
+
+ 
+
+Divergence – need to check in both swing high and lows for double Bottom | Top  
+
+only if you stick to max of 2 trades in a day, you will follow these rules..otherwise mind will take control 
+
+ 
+
+Shift your focus FROM Amt of Money per Week TO % of accurate trades in a week 
+
+ That way, you can increase your winning rate...The moment, we go beyond 70% winning rate, then you will not have any fear of losing money 
+
+ then it becomes easy to increase the qty 
+
+here are people with 30 to 40% winning rate and still make money in long term, but it is very tough to have that kind of mental strength... Hence i prefer to keep decent winning rate rather than stressing on continues losses.. 
+
+ 
+
+ALGO can make around 20 to 30% per year if option selling based...but if you need more than that then manual trading is must 
+
+try to excel in manual trading with mind control...then sky is the limit 
+
+ 
+
+You may use RSI TL BO or BD as additional confirmation for entry. Note that during entry, the RSI should have crossed above 40 for Bull and below 60 for Bear. 
+
+4h | Day RSI >60 & <40 means stronger momentum, do not trade against it esp. Over night, Min 2H TL BO should be there for Overnight position, 4H | Day – TB BO is much better  
+
+when the momentum is high use 5 EMA (for wave 3), if it is slow then 21 EMA is the trailing SL 
+
+Option price behave like Elliot corrective wave A-B-C, where wave C is impulsive with 5 waves.  
+
+Gold - Weekly TF - Oct,2023 - TL BO - 7% Risk, but it has given over 100% return if we just followed 21 EMA candle close trailing 
+
+ 
+
+ shooting star at the top is dangerous, usually price takes resistance at 62 to 78% of shooting start and comes down again 
+
+if the shotting star top is broken out then bulls are back 
+
+i draw TL based on 5 mins, but try to decide based on 3 mins BO candle 
+
+ 
+
 Double Top & Double Bottom  
 
 Against the Trend Reversal Double Bottom - Regular  Bullish Divergence - Price making either Equal Low or making lower low, But RSI making Higher Low 
 
 Trend Based Double Bottom - Opposite Divergence - Price making either Equal Low or higher low But RSI making Lower Low  
 
-Divergences 
-Bullish 
-Bearish 
-R 
-R 
-Sell 
-E 
-E 
-PRICE 
-Lower Low 
-PRICE 
-Higher High 
-G 
-G 
-U 
-AT 
-Buy 
-U 
-AT 
-L 
-L 
-A 
-A 
-R 
-INDICATOR 
-Higher Low 
-R 
-INDICATOR 
-Lower High 
-100 
-eyes 
-H 
-H 
-Sell 
-PRICE 
-Buy 
-Higher Low 
-PRICE 
-Lower High 
-1 
-- 
-T 
-D 
-T 
-D 
-D 
-D 
-E 
-INDICATOR 
-Lower Low 
-E 
-INDICATOR 
-Higher High 
-N 
-N 
   
 
  
 
 Candle patter 
 
-HAMMER 
-HANGING MAN 
-SHOOTING STAR 
-BUY 
-SELL 
-SELL 
-MORNING STAR 
-THREE INSIDE UP 
-BEARISH BREAKAWAY 
-BUY 
-BUY 
-SELL 
-BULLISH BREAKAWAY 
-EVENING STAR 
-THREE OUTSIDE DOWN 
-Ct 
-BUY 
-SELL 
-SELL 
  
 
 How to Draw Trend Line (TL) 
@@ -692,8 +692,6 @@ find a TL that has 3 touch points before the BO. (can view to lower TF like 1 mi
  
 
  
-
-Notes – completed till 20 Oct 2025 from Muruganatham chats  
 
  
 
@@ -787,6 +785,4 @@ To get clarity on swing use  'LuxAlgo Trend – with Swing deduction lookback �
 
 Daily mistakes: 
 
-Never buy without Candle Close Confirmation esp 5 min  
-
-  
+Never buy without Candle Close Confirmation esp 5 min
